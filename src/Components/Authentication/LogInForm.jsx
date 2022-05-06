@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import "./authentication.css";
-import { Link } from "react-router-dom";
-import { login } from "Redux/Reducers-Redux/authSlice";
+
+
 import { useDispatch } from "react-redux";
 function LogInForm({children}) {
   const [viewPassword, setViewPassword] = useState(false);
@@ -13,7 +13,7 @@ function LogInForm({children}) {
   function clickHandler(e) {
     //  to prevent initial refreshing of the page
     e.preventDefault(details);
-    dispatch(login(details));
+
   }
 
   return (
@@ -68,15 +68,13 @@ function LogInForm({children}) {
         className="btn btn-outline-pri  py-2 px-8  rounded text-lg mt-1.5"
         onClick={(e) => {
           e.preventDefault();
-          dispatch(login({ username: "akshat", password: "akshat" }));
+          // dispatch(login({ username: "akshat", password: "akshat" }));
         }}
       >
         Guest Log-In
       </button>
       {children}
-      {/* <a  className="link-btn text-center text-base">
-        Create new account <i className="fas fa-chevron-right text-accent"></i>
-      </a> */}
+      
     </>
   );
 }
