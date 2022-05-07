@@ -1,9 +1,8 @@
 import React, { useState } from "react";
 import "./authentication.css";
 
-
 import { useDispatch } from "react-redux";
-function LogInForm({children}) {
+function LogInForm({ children }) {
   const [viewPassword, setViewPassword] = useState(false);
   const [details, setDetails] = useState({
     userName: "",
@@ -13,7 +12,6 @@ function LogInForm({children}) {
   function clickHandler(e) {
     //  to prevent initial refreshing of the page
     e.preventDefault(details);
-
   }
 
   return (
@@ -74,7 +72,6 @@ function LogInForm({children}) {
         Guest Log-In
       </button>
       {children}
-      
     </>
   );
 }

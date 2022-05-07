@@ -6,12 +6,11 @@ import {SignUpForm} from "Components/Authentication/SignUpForm";
 function App() {
   return (
   <div className="App">
-    <p className="text ">Akshat</p>
     {/* <LogInForm/> */}
     <SignUpForm/>
-     <Routes>
+     {/* <Routes>
        <Route>  </Route>
-     </Routes>
+     </Routes> */}
   </div>
   );
 }
